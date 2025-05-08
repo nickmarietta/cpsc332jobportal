@@ -5,36 +5,47 @@
 </head>
 <body>
 <h1>
-    <a href = "home.html">
-    <img src="../images/2936630.png" alt="portal icon" width="251" height="251"></h1>
-</a>
+    <a href="home.html">
+        <img src="../images/2936630.png" alt="portal icon" width="251" height="251">
+    </a>
+</h1>
+
 <h2>
-<form>
+<form action="register.php" method="POST">
     <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname"><br><br>
+    <input type="text" id="fname" name="first_name" required><br><br>
+
     <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname"><br><br>
-    <label for="Username">Username:</label><br>
-    <input type="text" id="user" name="username"><br><br>
-    <label for="Password">Password:</label><br>
-    <input type="password" id="password" name="pass"><br><br>
-    <label for="confirmPassword">Confirm Password:</label><br>
-    <input type="password" id="password" name="confirmpass"><br><br>
-    <label for="Phone Number">Phone Number:</label><br>
-    <input type="text" id="Phone Number" name="Phone_num"><br><br>
-    <label for="Address">Address:</label><br>
-    <input type="text" id="Address" name="Address"><br><br>
-    <label for="Email">Email:</label><br>
-    <input type="text" id="Email" name="Email"><br><br>
-    <label for="Social Security">SSN:</label><br>
-    <input type="text" id="Social Security" name="ssn"><br><br>
+    <input type="text" id="lname" name="last_name" required><br><br>
+
+    <label for="username">Username:</label><br>
+    <input type="text" id="user" name="username" required><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="confirmpass">Confirm Password:</label><br>
+    <input type="password" id="confirmpass" name="confirmpass" required><br><br>
+
+    <label for="phone_number">Phone Number:</label><br>
+    <input type="text" id="phone_number" name="phone_number"><br><br>
+
+    <label for="address">Address:</label><br>
+    <input type="text" id="address" name="address"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br><br>
+
+
     <p>Are you a job seeker or an employer?</p>
-    <input type="radio" id="Job Seeker" name="category" value="applicant">
-    <label for="html">Job Seeker</label><br><br>
-    <input type="radio" id="Employer" name="category" value="employer">
-    <label for="html">Employer</label><br><br>
+    <input type="radio" id="Job Seeker" name="role" value="applicant" required>
+    <label for="Job Seeker">Job Seeker</label><br><br>
+
+    <input type="radio" id="Employer" name="role" value="employer" required>
+    <label for="Employer">Employer</label><br><br>
+
     <input type="submit" value="Create Account">
-  </form>
+</form>
 </h2>
 </body>
 </html>

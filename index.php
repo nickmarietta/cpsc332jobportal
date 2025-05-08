@@ -1,15 +1,22 @@
 <?php
-$servername = "localhost";
-$username = "root"; // default for laragon
-$password = "";     // default for laragon
-$dbname = "testdb";
 
-// create new connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+echo '<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Portal</title>
+  <link rel="stylesheet" href="css/style.css"> <!-- optional -->
+</head>
+<body>
+  <h1>Welcome to the Job Portal</h1>
+  <p>Please choose an option:</p>
 
-// check connection status 
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully to testdb";
+  <a href="html\createaccount.html">
+    <button>Create a New Account</button>
+  </a>
+
+  <a href="login.html">
+    <button>Login</button>
+  </a>
+</body>
+</html>';
 ?>
