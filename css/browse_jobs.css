@@ -96,3 +96,30 @@ body {
     z-index: 1000;
   }
   
+
+  .confirmation-box {
+    max-width: 600px;
+    margin: 5rem auto;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    color: white;
+    text-align: center;
+  }
+
+  .confirmation-box a {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #d33d04;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .confirmation-box a:hover {
+    background-color: #b93103;
+  }

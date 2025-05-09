@@ -15,19 +15,37 @@ if (!$job_id) {
 $account_id = $_SESSION['account_id'];
 $applicant_id = $conn->query("SELECT applicant_id FROM applicant WHERE account_id = $account_id")->fetch_assoc()['applicant_id'];
 
-// check if user has already applied to job
+// check if user has already applied
 $check = $conn->prepare("SELECT * FROM application WHERE applicant_id = ? AND job_id = ?");
 $check->bind_param("ii", $applicant_id, $job_id);
 $check->execute();
 if ($check->get_result()->num_rows > 0) {
-  echo "You have already applied to this job.<br><a href='browse_jobs.php'>Back to Job List</a>";
-  exit;
+  $alreadyApplied = true;
+} else {
+  $apply = $conn->prepare("INSERT INTO application (applicant_id, job_id, status) VALUES (?, ?, 'Pending')");
+  $apply->bind_param("ii", $applicant_id, $job_id);
+  $apply->execute();
+  $alreadyApplied = false;
 }
-
-// logic to actually apply
-$apply = $conn->prepare("INSERT INTO application (applicant_id, job_id, status) VALUES (?, ?, 'Pending')");
-$apply->bind_param("ii", $applicant_id, $job_id);
-$apply->execute();
-
-echo "Application submitted successfully.<br><a href='browse_jobs.php'>Back to Job List</a>";
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Application Status</title>
+  <link rel="stylesheet" href="../css/browse_jobs.css">
+</head>
+<body>
+
+  <div class="confirmation-box">
+    <?php if ($alreadyApplied): ?>
+      <h1>You have already applied to this job.</h1>
+    <?php else: ?>
+      <h1>Application submitted successfully!</h1>
+    <?php endif; ?>
+    <a href="browse_jobs.php">Back to Job Listings</a>
+  </div>
+
+</body>
+</html>
