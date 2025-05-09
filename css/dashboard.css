@@ -27,6 +27,13 @@
     margin-bottom: 1rem;
   }
   
+  p {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    padding-bottom: 20px;
+  }
+
   nav {
     margin-bottom: 2rem;
   }

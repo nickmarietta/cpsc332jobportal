@@ -36,15 +36,15 @@ $jobResult = $jobQuery->get_result();
 <head>
   <meta charset="UTF-8">
   <title>Employer Dashboard</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
   <h1>Welcome, <?php echo htmlspecialchars($first_name); ?>!</h1>
   <p>Company: <?php echo htmlspecialchars($company_name ?: 'N/A'); ?></p>
 
   <nav>
-    <a href="post_job.php">Post New Job</a> |
-    <a href="manage_jobs.php">Manage My Listings</a> |
+    <a href="post_job.php">Post New Job</a> 
+    <a href="manage_jobs.php">Manage My Listings</a> 
     <a href="../auth/logout.php">Logout</a>
   </nav>
 
