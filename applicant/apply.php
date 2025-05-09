@@ -7,7 +7,7 @@ if (!isset($_SESSION['account_id']) || $_SESSION['role'] !== 'applicant') {
   exit;
 }
 
-$job_id = $_GET['id'] ?? null;
+$job_id = $_GET['job_id'] ?? null;
 if (!$job_id) {
   die("Job ID not provided.");
 }
