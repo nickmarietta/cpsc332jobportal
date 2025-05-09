@@ -52,6 +52,8 @@ CREATE TABLE
     `company` VARCHAR(45),
     `account_id` INT NOT NULL,
     `company_name` VARCHAR(100),
+    `email` VARCHAR(100),
+    `phone_number` VARCHAR(15),
     `first_name` VARCHAR(45),
     `last_name` VARCHAR(45),
     `street_name` VARCHAR(100),
