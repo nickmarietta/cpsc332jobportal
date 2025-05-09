@@ -27,8 +27,13 @@ if (isset($_GET['sort'])) {
   }
 }
 
-// --- Fetch sorted jobs ---
-$jobsQuery = $conn->prepare("SELECT * FROM jobs ORDER BY $orderBy");
+// --- get sorted jobs ---
+$jobsQuery = $conn->prepare("
+  SELECT jobs.*, employer.company_name
+  FROM jobs
+  JOIN employer ON jobs.employer_id = employer.employer_id
+  ORDER BY $orderBy
+");
 $jobsQuery->execute();
 $jobs = $jobsQuery->get_result();
 ?>
@@ -63,19 +68,21 @@ $jobs = $jobsQuery->get_result();
 <!-- here are the actual listings -->
 <?php if ($jobs->num_rows > 0): ?>
   <ul class="job-list">
-  <?php while ($job = $jobs->fetch_assoc()): ?>
-    <li class="job-card">
-      <h2><?= htmlspecialchars($job['title']) ?></h2>
-      <p><strong>Location:</strong> <?= htmlspecialchars($job['location']) ?></p>
-      <p class="salary">$<?= number_format($job['salary'], 2) ?></p>
-      <p><strong>Posted:</strong> <?= htmlspecialchars($job['date_posted']) ?></p>
-      <a class="apply-btn" href="apply.php?job_id=<?= $job['job_id'] ?>">Apply</a>
-    </li>
-  <?php endwhile; ?>
-</ul>
+    <?php while ($job = $jobs->fetch_assoc()): ?>
+      <li class="job-card">
+        <h2><?= htmlspecialchars($job['title']) ?></h2>
+        <p><strong>Location:</strong> <?= htmlspecialchars($job['location']) ?></p>
+        <p class="salary">$<?= number_format($job['salary'], 2) ?></p>
+        <p><strong>Company:</strong> <?= htmlspecialchars($job['company_name'] ?? 'N/A') ?></p>
+        <p><strong>Posted:</strong> <?= htmlspecialchars($job['date_posted']) ?></p>
+        <a class="apply-btn" href="apply.php?job_id=<?= $job['job_id'] ?>">Apply</a>
+      </li>
+    <?php endwhile; ?>
+  </ul>
 <?php else: ?>
   <p>No jobs available.</p>
 <?php endif; ?>
+
   <a href="dashboard.php" class="back-to-dashboard">Back to Dashboard</a>
 
 </body>

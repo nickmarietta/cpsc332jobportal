@@ -5,7 +5,7 @@ require '../includes/db.php';
 $error = '';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  $role         = $_POST['role'] ?? '';
+  $role         = 'employer';
   $username     = $_POST['username'] ?? '';
   $password     = $_POST['password'] ?? '';
   $confirmpass  = $_POST['confirmpass'] ?? '';
@@ -14,8 +14,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $email        = $_POST['email'] ?? '';
   $phone_number = $_POST['phone_number'] ?? '';
   $address      = $_POST['address'] ?? '';
+  $company_name = $_POST['company_name'] ?? '';
 
-  if (!$role || !$username || !$password || !$confirmpass || !$first_name || !$last_name) {
+  if (!$username || !$password || !$confirmpass || !$first_name || !$last_name || !$company_name) {
     $error = "Please fill out all required fields.";
   } elseif ($password !== $confirmpass) {
     $error = "Passwords do not match.";
@@ -28,25 +29,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($stmt->execute()) {
       $account_id = $stmt->insert_id;
 
-      if ($role === 'applicant') {
-        $insert = $conn->prepare(
-          "INSERT INTO applicant (first_name, last_name, email, phone_number, account_id, street_name) 
-           VALUES (?, ?, ?, ?, ?, ?)"
-        );
-        $insert->bind_param("ssssis", $first_name, $last_name, $email, $phone_number, $account_id, $address);
-      } else {
-        $insert = $conn->prepare(
-          "INSERT INTO employer (first_name, last_name, email, phone_number, account_id, street_name) 
-           VALUES (?, ?, ?, ?, ?, ?)"
-        );
-        $insert->bind_param("ssssis", $first_name, $last_name, $email, $phone_number, $account_id, $address);
-      }
+      $insert = $conn->prepare(
+        "INSERT INTO employer (company_name, first_name, last_name, email, phone_number, account_id, street_name) 
+         VALUES (?, ?, ?, ?, ?, ?, ?)"
+      );
+      $insert->bind_param("sssssis", $company_name, $first_name, $last_name, $email, $phone_number, $account_id, $address);
 
       if ($insert->execute()) {
         $_SESSION['account_id'] = $account_id;
         $_SESSION['role'] = $role;
 
-        header("Location: " . ($role === 'applicant' ? "/applicant/dashboard.php" : "/employer/dashboard.php"));
+        header("Location: ../employer/dashboard.php");
         exit;
       } else {
         $error = "Error inserting profile: " . $insert->error;
@@ -55,7 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       $error = "Error creating account: " . $stmt->error;
     }
   }
-}   
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
 
 <!-- was using the incorrect action here, reference the correct file -->
-<form action="register.php" method="POST">
+<form action="register_employer.php" method="POST">
     <div class="signupform">
         <a href="../index.php"><img src="../images/logo.png" ></a>
         

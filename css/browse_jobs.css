@@ -74,7 +74,7 @@ body {
     font-weight: 500;
     transition: background-color 0.3s ease;
   }
-  
+  /* hover animation for the job listings */
   .job-card .apply-btn:hover {
     background-color: #b93103;
   }
