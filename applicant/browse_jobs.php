@@ -44,17 +44,19 @@ $jobs = $jobsQuery->get_result();
 
 <h1>Available Jobs</h1>
 
-<!-- this is where the sorting logic is -->
+<!-- this is where the sorting logic is
+    also had to change to the ? so that we did not get a null defined value error for the radio button
+-->
 <form method="GET" action="browse_jobs.php">
   <label for="sort">Sort by:</label>
   <select name="sort" id="sort" onchange="this.form.submit()">
     <option value="">-- Select --</option>
-    <option value="date_desc" <?= $_GET['sort'] === 'date_desc' ? 'selected' : '' ?>>Newest First</option>
-    <option value="date_asc" <?= $_GET['sort'] === 'date_asc' ? 'selected' : '' ?>>Oldest First</option>
-    <option value="salary_desc" <?= $_GET['sort'] === 'salary_desc' ? 'selected' : '' ?>>Highest Salary</option>
-    <option value="salary_asc" <?= $_GET['sort'] === 'salary_asc' ? 'selected' : '' ?>>Lowest Salary</option>
-    <option value="title_asc" <?= $_GET['sort'] === 'title_asc' ? 'selected' : '' ?>>Title A–Z</option>
-    <option value="title_desc" <?= $_GET['sort'] === 'title_desc' ? 'selected' : '' ?>>Title Z–A</option>
+    <option value="date_desc" <?= ($_GET['sort'] ?? '') === 'date_desc' ? 'selected' : '' ?>>Newest First</option>
+    <option value="date_asc" <?= ($_GET['sort'] ?? '') === 'date_asc' ? 'selected' : '' ?>>Oldest First</option>
+    <option value="salary_desc" <?= ($_GET['sort'] ?? '') === 'salary_desc' ? 'selected' : '' ?>>Highest Salary</option>
+    <option value="salary_asc" <?= ($_GET['sort'] ?? '') === 'salary_asc' ? 'selected' : '' ?>>Lowest Salary</option>
+    <option value="title_asc" <?= ($_GET['sort'] ?? '') === 'title_asc' ? 'selected' : '' ?>>Title A–Z</option>
+    <option value="title_desc" <?= ($_GET['sort'] ?? '') === 'title_desc' ? 'selected' : '' ?>>Title Z–A</option>
   </select>
 </form>
 
@@ -74,6 +76,7 @@ $jobs = $jobsQuery->get_result();
 <?php else: ?>
   <p>No jobs available.</p>
 <?php endif; ?>
+  <a href="dashboard.php" class="back-to-dashboard">Back to Dashboard</a>
 
 </body>
 </html>
