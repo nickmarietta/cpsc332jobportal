@@ -20,6 +20,7 @@ $applications = $conn->query("SELECT j.title, j.location, a.status, e.company_na
 <!DOCTYPE html>
 <html>
 <head><title>My Applications</title></head>
+<link rel="stylesheet" href="../css/applications.css">
 <body>
 <h1>My Applications</h1>
 <table border="1">
