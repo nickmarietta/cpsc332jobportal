@@ -5,7 +5,7 @@ require '../includes/db.php';
 $error = '';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  $role         = $_POST['role'] ?? '';
+  $role         = 'applicant';
   $username     = $_POST['username'] ?? '';
   $password     = $_POST['password'] ?? '';
   $confirmpass  = $_POST['confirmpass'] ?? '';
@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION['account_id'] = $account_id;
         $_SESSION['role'] = $role;
 
-        header("Location: " . ($role === 'applicant' ? "/applicant/dashboard.php" : "/employer/dashboard.php"));
+        header("Location: ../applicant/dashboard.php");
         exit;
       } else {
         $error = "Error inserting profile: " . $insert->error;
@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
 
 <!-- was using the incorrect action here, reference the correct file -->
-<form action="register.php" method="POST">
+<form action="register_applicant.php" method="POST">
     <div class="signupform">
         <a href="../index.php"><img src="../images/logo.png" ></a>
         

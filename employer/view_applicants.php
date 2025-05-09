@@ -24,20 +24,34 @@ $results = $stmt->get_result();
 ?>
 
 <!DOCTYPE html>
-<html>
-<head><title>View Applicants</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View Applicants</title>
+  <link rel="stylesheet" href="../css/view_applicants.css">
+</head>
 <body>
-<h1>Applicants for Job #<?php echo htmlspecialchars($job_id); ?></h1>
-<table border="1">
-<tr><th>Name</th><th>Email</th><th>Status</th></tr>
-<?php while ($row = $results->fetch_assoc()): ?>
-  <tr>
-    <td><?php echo htmlspecialchars($row['first_name'] . ' ' . $row['last_name']); ?></td>
-    <td><?php echo htmlspecialchars($row['email']); ?></td>
-    <td><?php echo htmlspecialchars($row['status']); ?></td>
-  </tr>
-<?php endwhile; ?>
-</table>
-<a href="dashboard.php">Back to Dashboard</a>
+
+  <div class="container">
+    <h1>Applicants for Job #<?php echo htmlspecialchars($job_id); ?></h1>
+
+    <table class="applicant-table">
+      <thead>
+        <tr><th>Name</th><th>Email</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+      <?php while ($row = $results->fetch_assoc()): ?>
+        <tr>
+          <td><?php echo htmlspecialchars($row['first_name'] . ' ' . $row['last_name']); ?></td>
+          <td><?php echo htmlspecialchars($row['email']); ?></td>
+          <td><?php echo htmlspecialchars($row['status']); ?></td>
+        </tr>
+      <?php endwhile; ?>
+      </tbody>
+    </table>
+
+    <a href="dashboard.php" class="back-btn">Back to Dashboard</a>
+  </div>
+
 </body>
 </html>

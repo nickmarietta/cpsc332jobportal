@@ -40,7 +40,7 @@ $results = $query->get_result();
 <html>
 <head>
   <title>Manage Applications</title>
-  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/applications.css">
 </head>
 <body>
 <h2>Manage Applications</h2>
