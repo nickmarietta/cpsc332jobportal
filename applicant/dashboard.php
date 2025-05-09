@@ -20,13 +20,18 @@ if (!$applicant) {
 
 <!DOCTYPE html>
 <html>
-<head><title>Applicant Dashboard</title></head>
+<head>
+  <meta charset="UTF-8">
+  <title>Applicant Dashboard</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
 <body>
-<h1>Welcome, <?php echo htmlspecialchars($applicant['first_name']); ?>!</h1>
-<nav>
-  <a href="browse_jobs.php">Browse Jobs</a> |
-  <a href="applications.php">My Applications</a> |
-  <a href="../auth/logout.php">Logout</a>
-</nav>
+  <h1>Welcome, <?php echo htmlspecialchars($applicant['first_name']); ?>!</h1>
+
+  <nav>
+    <a href="browse_jobs.php">Browse Jobs</a> 
+    <a href="applications.php">My Applications</a> 
+    <a href="../auth/logout.php">Logout</a>
+  </nav>
 </body>
 </html>
