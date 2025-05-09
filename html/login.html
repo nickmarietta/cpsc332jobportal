@@ -1,27 +1,34 @@
 <!DOCTYPE html>
+<link rel = "stylesheet" href = "login.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <html>
-<head>
-    <link rel="stylesheet" href="../css/login.css">
-</head>
-<body>
-<h1>
-    <a href = "home.html">
-    <img src="../images/2936630.png" alt="portal icon" width="251" height="251"></h1>
-</a>
-<h2>
-    <p>Log in to your account</p>
-    <form>
-        <label for="Username">Username:</label><br>
-        <input type="text" id="user" name="username"><br>
-        <label for="Password">Password:</label><br>
-        <input type="password" id="pass" name="password"><br>
-        <input type="submit" value="Login">
-      </form>
-    </h2>
-<h3>
-    <p>Create a new account</p>
-    <a href="createaccount.html">
-        <button class="button button1">Sign Up</button>
-</h3>
-</body>
-</html>
+  <body>
+    <!----HEADER SECTION---->
+    <header>
+      <div id="navigation" class="obj-width">
+        <a href="index.html"><img class="logo" src="images/logo.png" alt=""></a>
+        <ul id ="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Job List</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <i id="menubar" class="bx bx-menu"></i>
+      </div>
+    </header>
+    <!----LOGIN SECTION-->
+    <section class="main">
+        <div class="mainbox obj-width">
+            <div class="h-left">
+                <h2>Log in to your account</h2>
+                <div class="login-sect">
+                    <input type="text" placeholder="Username">
+                    <input type = "text" placeholder = "Password">
+                    <a href="index.html">Login</a>
+                    <a href="createaccount.html">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </section>
