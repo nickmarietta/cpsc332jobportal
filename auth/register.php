@@ -95,6 +95,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <label for="Employer">Employer</label><br><br>
 
         <input type="submit" class="signupbtn" value="Create Account">
+
+        <a> Already have an account? <a href="./login.php">Click here </a> </a>
     </div>
 </form>
 </body>

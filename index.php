@@ -10,7 +10,7 @@
 <body>
 
 <header>
-  <h1>Welcome to JobConnect</h1>
+  <h1>JobConnect</h1>
 </header>
 
 <main>
