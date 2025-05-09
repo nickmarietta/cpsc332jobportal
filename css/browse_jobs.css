@@ -1,7 +1,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
     margin: 0;
     padding: 2rem;
   }
@@ -9,7 +9,7 @@ body {
   h1 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #2c3e50;
+    color: #ffffff;
   }
   
   form {
@@ -21,7 +21,9 @@ body {
     padding: 0.5rem;
     font-size: 1rem;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    background-color: #2e2e2e;
+    color: #ffffff;
+    border: 1px solid #555;
   }
   
   /* container for the job cards */
@@ -35,38 +37,39 @@ body {
   
   /* singular job card */
   .job-card {
-    background-color: #ffffff;
+    background-color: #2a2a2a;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 1.5rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
   .job-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
   }
   
   .job-card h2 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
-    color: #d33d04;
+    color: #ff5722;
   }
   
   .job-card p {
     margin: 0.25rem 0;
     font-size: 0.95rem;
+    color: #e0e0e0;
   }
   
   .job-card .salary {
     font-weight: bold;
-    color: #27ae60;
+    color: #4caf50;
   }
   
   .job-card .apply-btn {
     margin-top: 1rem;
     display: inline-block;
-    background-color: #d33d04;
+    background-color: #ff5722;
     color: white;
     padding: 0.5rem 1.2rem;
     border-radius: 25px;
@@ -74,22 +77,22 @@ body {
     font-weight: 500;
     transition: background-color 0.3s ease;
   }
-  /* hover animation for the job listings */
+  
   .job-card .apply-btn:hover {
-    background-color: #b93103;
+    background-color: #e64a19;
   }
   
-
   .back-to-dashboard {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #d33d04;
+    background-color: #ff5722;
     color: white;
     padding: 12px 20px;
     border-radius: 30px;
     font-weight: bold;
     text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     z-index: 1000;
   }
+  
