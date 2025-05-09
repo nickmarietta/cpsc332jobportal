@@ -16,8 +16,8 @@
 
 <main>
   <p>
-    This platform allows <strong>Job Seekers</strong> to create profiles, browse job listings, and apply to jobs.<br>
-    <strong>Employers</strong> can post job openings, manage applicants, and schedule interviews.
+    <strong>JobConnect</strong> allows <i>Job Seekers</i> to create profiles, browse job listings, and apply to jobs.<br>
+    <i>Employers</i> can post job openings, manage applicants, and schedule interviews.
   </p>
 
   <div class="buttons">
