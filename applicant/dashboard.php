@@ -26,7 +26,6 @@ if (!$applicant) {
 <nav>
   <a href="browse_jobs.php">Browse Jobs</a> |
   <a href="applications.php">My Applications</a> |
-  <a href="profile.php">My Profile</a> |
   <a href="../auth/logout.php">Logout</a>
 </nav>
 </body>

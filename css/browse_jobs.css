@@ -1,0 +1,81 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 2rem;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+  }
+  
+  form {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* container for the job cards */
+  .job-list {
+    display: inline;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* singular job card */
+  .job-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .job-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #d33d04;
+  }
+  
+  .job-card p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+  }
+  
+  .job-card .salary {
+    font-weight: bold;
+    color: #27ae60;
+  }
+  
+  .job-card .apply-btn {
+    margin-top: 1rem;
+    display: inline-block;
+    background-color: #d33d04;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .job-card .apply-btn:hover {
+    background-color: #b93103;
+  }
+  

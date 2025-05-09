@@ -57,7 +57,7 @@ $jobResult = $jobQuery->get_result();
           <strong><?php echo htmlspecialchars($job['title']); ?></strong> –
           <?php echo htmlspecialchars($job['location']); ?> –
           Posted on <?php echo htmlspecialchars($job['date_posted']); ?>
-          [<a href="view_applicants.php?id=<?php echo $job['job_id']; ?>">View Applicants</a>]
+          [<a href="applications.php?">View Applicants</a>]
         </li>
       <?php endwhile; ?>
     </ul>
