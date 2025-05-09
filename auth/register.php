@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <form action="../register.php" method="POST">
     <div class="signupform">
-        <a href="../html/index.html"><img src="../images/logo.png" ></a>
+        <a href="../index.php"><img src="../images/logo.png" ></a>
         
         <h1> Sign Up</h1>
         <input type="text" class="input-box" id="fname" name="first_name" placeholder="First Name" required><br><br>

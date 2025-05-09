@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  body {
+    position: relative;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  header {
+    background-color: rgb(46, 46, 46);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  #navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 95px;
+    padding: 0 2rem;
+  }
+  .logo {
+    width: 120px;
+  }
+  #menu {
+    display: flex;
+    list-style: none;
+  }
+  #menu li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  /* MAIN */
+  main {
+    margin-top: 100px;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+  }
+  p {
+    font-size: 1.1rem;
+    margin: 1.5rem auto;
+    max-width: 600px;
+  }
+  
+  /* BUTTONS */
+  .buttons {
+    margin-top: 2rem;
+  }
+  .buttons a {
+    display: inline-block;
+    background: rgb(219, 61, 4);
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 35px;
+    margin: 0 10px;
+    transition: background 0.3s ease;
+  }
+  .buttons a:hover {
+    background: rgb(190, 50, 2);
+  }
+  
+  /* OPTIONAL: Responsive */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+    .buttons a {
+      margin: 10px 5px;
+      padding: 10px 20px;
+    }
+  }

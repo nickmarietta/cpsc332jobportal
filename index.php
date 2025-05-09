@@ -1,22 +1,29 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Job Portal</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JobConnect</title>
+  <link rel="stylesheet" href="css/index.css">
+  
 </head>
 <body>
-  <h1>Welcome to the Job Portal</h1>
 
-  <?php if (isset($_SESSION['account_id'])): ?>
-    <p>You are logged in as <?php echo htmlspecialchars($_SESSION['role']); ?>.</p>
-    <a href="<?php echo $_SESSION['role'] === 'applicant' ? 'applicant/dashboard.php' : 'employer/dashboard.php'; ?>">Go to Dashboard</a>
-    <a href="auth/logout.php">Logout</a>
-  <?php else: ?>
-    <a href="auth/login.php">Login</a> | <a href="auth/register.php">Register</a>
-  <?php endif; ?>
+<header>
+  <h1>Welcome to JobConnect</h1>
+</header>
+
+<main>
+  <p>
+    This platform allows <strong>Job Seekers</strong> to create profiles, browse job listings, and apply to jobs.<br>
+    <strong>Employers</strong> can post job openings, manage applicants, and schedule interviews.
+  </p>
+
+  <div class="buttons">
+    <a href="auth/login.php">Login</a>
+    <a href="auth/register.php">Sign Up</a>
+  </div>
+</main>
+
 </body>
 </html>

@@ -123,3 +123,26 @@ header {
     padding: 9px 30px;
     border-radius: 35px;
 }
+
+.login-button {
+    background: rgb(219, 61, 4);
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 35px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sign-up-button {
+    background: rgb(255, 255, 255);
+  color: rgb(219, 61, 4);
+  padding: 9px 25px;
+  border: 2px solid rgb(219, 61, 4);
+  border-radius: 35px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 5px;
+}

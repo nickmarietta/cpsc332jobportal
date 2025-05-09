@@ -34,42 +34,45 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="../css/login.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <title>Login</title>
 </head>
 <body>
+
+  <!-- HEADER SECTION -->
   <header>
     <div id="navigation" class="obj-width">
-      <a href="index.php"><img class="logo" src="images/logo.png" alt=""></a>
+      <a href="../index.php"><img class="logo" src="../images/logo.png" alt=""></a>
       <ul id="menu">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="#">Job List</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="../index.php">Home</a></li>
       </ul>
       <i id="menubar" class="bx bx-menu"></i>
     </div>
   </header>
 
+  <!-- LOGIN SECTION -->
   <section class="main">
     <div class="mainbox obj-width">
       <div class="h-left">
-        <h2>Log in to your account</h2>
+        <h2>Login</h2>
+
         <?php if ($error): ?>
           <p style="color: red;"><?php echo htmlspecialchars($error); ?></p>
         <?php endif; ?>
+
         <form method="POST" action="login.php" class="login-sect">
           <input type="text" name="username" placeholder="Username" required>
           <input type="password" name="password" placeholder="Password" required>
-          <button type="submit">Login</button>
+          <button class="login-button" type="submit">Login</button>
         </form>
-        <a href="register.php">Sign up</a>
+
+        <a class="sign-up-button" href="../auth/register.php">Sign up</a>
       </div>
     </div>
   </section>
+
 </body>
 </html>
-
-
