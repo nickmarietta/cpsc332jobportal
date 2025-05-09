@@ -21,6 +21,8 @@
     <p>Already have an account? <a href="./login.php">Click here</a></p>
   </div>
 
+
+<!-- logic to get the roleForm and then guides it to the right page -->
   <script>
     document.getElementById("roleForm").addEventListener("submit", function(e) {
       e.preventDefault();

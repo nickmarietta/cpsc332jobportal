@@ -143,6 +143,11 @@ header {
   border-radius: 35px;
   font-size: 1.1rem;
   font-weight: 500;
-  text-decoration: none;
   padding: 5px;
+}
+
+.signup-inline {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* spacing between text and button */
 }

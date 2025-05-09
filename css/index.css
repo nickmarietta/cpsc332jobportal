@@ -87,3 +87,15 @@
       padding: 10px 20px;
     }
   }
+
+  .logo-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+  }
+  
+  .main-logo {
+    width: 60px;
+    height: auto;
+  }

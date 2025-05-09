@@ -9,7 +9,8 @@
 </head>
 <body>
 
-<header>
+<header class="logo-header">
+  <img src="images/logo.png" alt="JobConnect Logo" class="main-logo">
   <h1>JobConnect</h1>
 </header>
 
