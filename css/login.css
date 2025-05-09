@@ -69,6 +69,7 @@ header {
     font-weight: 500;
 }
 #btn{
+    text-decoration: none;
     margin-left: 40px;
     background: rgb(219, 61, 4);
     color:rgb(255, 255, 255);
