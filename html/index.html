@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<link rel = "stylesheet" href = "style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<html>
+  <body>
+    <!----HEADER SECTION---->
+    <header>
+      <div id="navigation" class="obj-width">
+        <a href="index.html"><img class="logo" src="images/logo.png" alt=""></a>
+        <ul id ="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Job List</a></li>
+            <li><a href="">Contact</a></li>
+            <button href="login.html" id="btn">Log in</button>
+        </ul>
+        <i id="menubar" class="bx bx-menu"></i>
+      </div>
+    </header>
+    <!----MAIN SECTION-->
+    <section class="main">
+        <div class="mainbox obj-width">
+            <div class="h-left">
+                <h1>Find a job today</h1>
+                <p>Explore your options</p>
+                <div class="search-sect">
+                    <input type="text" placeholder="Search for a job">
+                    <input type = "text" placeholder = "Search Location">
+                    <input type = "text" placeholder = "All categories">
+                    <a href="#">Search</a>
+                </div>
+            </div>
+            <div class="h-right">
+                <img src="images/jobimage.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!----JOB SECTION---->
+    <section class = "jobs sec-space obj-width">
+        <h2>Job List</h2>
+        <p>Current jobs that are open to the market</p>
+        <ul class="job-id">
+            <li data-target="all">Recent Jobs</li>
+            <li data-target="internships">Internships</li>
+            <li data-target="fulltime">Full Time</li>
+            <li data-target="parttime">Part Time</li>
+        </ul>
+        <div class="jobs-container">
+            <li class="jList"></li>
+        </div>
+    </section>
+        <script src="script.js"></script>
+  </body>
+</html>
