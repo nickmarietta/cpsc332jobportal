@@ -19,9 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $_SESSION['role'] = $user['role'];
     
     if ($user['role'] === 'applicant') {
-      header("Location: applicant/dashboard.php");
+      header("Location: ../applicant/dashboard.php");
     } else {
-      header("Location: employer/dashboard.php");
+      header("Location: ../employer/dashboard.php");
     }
     exit;
   } else {
@@ -71,3 +71,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   </section>
 </body>
 </html>
+
+

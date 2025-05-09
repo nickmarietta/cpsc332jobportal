@@ -26,10 +26,10 @@ $applications = $conn->query("SELECT j.title, j.location, a.status, e.company_na
 <tr><th>Job Title</th><th>Company</th><th>Location</th><th>Status</th></tr>
 <?php while ($app = $applications->fetch_assoc()): ?>
 <tr>
-  <td><?php echo htmlspecialchars($app['title']); ?></td>
-  <td><?php echo htmlspecialchars($app['company_name']); ?></td>
-  <td><?php echo htmlspecialchars($app['location']); ?></td>
-  <td><?php echo htmlspecialchars($app['status']); ?></td>
+  <td><?php echo htmlspecialchars($app['title']  ?? ''); ?></td>
+  <td><?php echo htmlspecialchars($app['company_name']  ?? ''); ?></td>
+  <td><?php echo htmlspecialchars($app['location']  ?? ''); ?></td>
+  <td><?php echo htmlspecialchars($app['status']  ?? ''); ?></td>
 </tr>
 <?php endwhile; ?>
 </table>
