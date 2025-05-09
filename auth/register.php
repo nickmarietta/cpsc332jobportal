@@ -65,7 +65,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body>
 
-<form action="../register.php" method="POST">
+<!-- was using the incorrect action here, reference the correct file -->
+<form action="register.php" method="POST">
     <div class="signupform">
         <a href="../index.php"><img src="../images/logo.png" ></a>
         
