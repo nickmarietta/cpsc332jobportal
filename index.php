@@ -21,7 +21,7 @@
 
   <div class="buttons">
     <a href="auth/login.php">Login</a>
-    <a href="auth/register.php">Sign Up</a>
+    <a href="auth/register_intro.php">Sign Up</a>
   </div>
 </main>
 

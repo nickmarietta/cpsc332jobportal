@@ -83,21 +83,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         <input type="text" class="input-box" id="phone_number" name="phone_number" placeholder="Phone Number"><br><br>
 
+        <input type="text" class="input-box" id="company" name="company_name" placeholder="Company Name"><br><br>
+
         <input type="text" class="input-box" id="address" name="address" placeholder="Address"><br><br>
 
         <input type="text" class="input-box" id="email" name="email" placeholder="Email"><br><br>
 
-
-        <p>Are you a job seeker or an employer?</p>
-        <input type="radio" id="Job Seeker" name="role" value="applicant" required>
-        <label for="Job Seeker">Job Seeker</label><br><br>
-
-        <input type="radio" id="Employer" name="role" value="employer" required>
-        <label for="Employer">Employer</label><br><br>
-
         <input type="submit" class="signupbtn" value="Create Account">
-
-        <a> Already have an account? <a href="./login.php">Click here </a> </a>
+        <p>Already have an account? <a href="./login.php">Click here</a></p>
     </div>
 </form>
 </body>
