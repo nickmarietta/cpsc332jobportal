@@ -44,7 +44,7 @@ $jobResult = $jobQuery->get_result();
 
   <nav>
     <a href="post_job.php">Post New Job</a> 
-    <a href="manage_jobs.php">Manage My Listings</a> 
+    <a href="manage_jobs.php">View Posted Jobs</a> 
     <a href="../auth/logout.php">Logout</a>
   </nav>
 

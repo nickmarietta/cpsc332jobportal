@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head><title>Post Job</title></head>
+<link rel="stylesheet" href="../css/post_job.css">
 <body>
 <h1>Post a New Job</h1>
 <form method="POST">
